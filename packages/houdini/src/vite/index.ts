@@ -27,8 +27,8 @@ export default function (opts?: PluginConfig): Plugin[] {
 		watch_local_schema(watchSchemaListref),
 		watchAndRun([
 			{
-				name: 'Houdini',
-				// quiet: true,
+                name: 'Houdini',
+                logs: [],
 				async watchFile(filepath: string) {
 					// load the config file
 					const config = await getConfig(opts)
